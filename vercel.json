@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/calculadora_pj_ti_simples.html" }
+  ]
+}

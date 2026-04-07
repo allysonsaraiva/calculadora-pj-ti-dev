@@ -14,11 +14,11 @@ Simulador de impostos e líquido mensal para desenvolvedores e profissionais de 
 
 ## Como usar
 
-Basta abrir o arquivo `calculadora_pj_ti_simples.html` diretamente no navegador — sem dependências, sem build, sem servidor.
+Basta abrir o arquivo `index.html` diretamente no navegador — sem dependências, sem build, sem servidor.
 
 ```bash
 # Clonar ou baixar o arquivo e abrir
-open calculadora_pj_ti_simples.html
+open index.html
 ```
 
 ## Cálculos
