@@ -1,4 +1,4 @@
-# Calculadora PJ TI — Simples Nacional
+# Calculadora PJ TI/Programador — Simples Nacional
 
 Simulador de impostos e líquido mensal para desenvolvedores e profissionais de TI que atuam como Pessoa Jurídica (ME) no regime do Simples Nacional.
 
