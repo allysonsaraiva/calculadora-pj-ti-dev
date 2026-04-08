@@ -1,87 +1,14 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora PJ TI/Programador — Simples Nacional</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Calculadora PJ</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Calculadora PJ — Simples Nacional (TI/Programador)</h1>
-        <p>Simule impostos e líquido para ME no regime do Simples Nacional</p>
-      </header>
-
-      <div class="card">
-        <p class="section-label">Faturamento mensal (valor da NF emitida)</p>
-        <div class="slider-header">
-          <span>Arraste para simular</span>
-          <strong id="fat-display">R$ 7.000,00</strong>
-        </div>
-        <input
-          type="range"
-          min="3000"
-          max="30000"
-          step="500"
-          value="7000"
-          id="fat-slider"
-        />
-      </div>
-
-      <div class="card">
-        <p class="section-label">Custos extras (opcional)</p>
-        <div class="optional-field">
-          <label>
-            Honorário do contador
-            <span>Deixe 0 para ignorar no cálculo</span>
-          </label>
-          <div class="input-prefix-wrap">
-            <span class="prefix">R$</span>
-            <input
-              type="number"
-              id="contador-input"
-              min="0"
-              step="50"
-              value="0"
-              placeholder="0"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div id="info-box" class="info-box"></div>
-
-      <p class="section-label">Comparativo de anexos</p>
-      <div class="comparison">
-        <div class="anexo-card winner" id="card-iii">
-          <div class="badge g">Anexo III — recomendado</div>
-          <p class="anexo-title">Folha ≥ 28% do faturamento</p>
-          <p class="anexo-sub" id="sub-iii"></p>
-          <div id="rows-iii"></div>
-        </div>
-        <div class="anexo-card" id="card-v">
-          <div class="badge r">Anexo V — evitar</div>
-          <p class="anexo-title">Folha &lt; 28% do faturamento</p>
-          <p class="anexo-sub" id="sub-v"></p>
-          <div id="rows-v"></div>
-        </div>
-      </div>
-
-      <p class="section-label">Resumo — Anexo III (cenário ideal)</p>
-      <div class="cards-row" id="summary-cards"></div>
-
-      <p class="section-label">Breakdown completo de custos — Anexo III</p>
-      <div class="detail-table" id="detail-rows"></div>
-
-      <footer>
-        Valores atualizados para 2026 — tabela IRRF (MP 1.294/2025) + Reforma da
-        Renda (Lei 15.270/2025). Fonte: Receita Federal ·
-        gov.br/receitafederal/tabelas/2026. Consulte um contador para decisões
-        financeiras.
-      </footer>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
