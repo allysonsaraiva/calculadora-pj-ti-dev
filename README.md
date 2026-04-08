@@ -53,7 +53,55 @@ As fórmulas estão centralizadas em `src/lib/calc.ts` e seguem as normas tribut
 - **Tabela Progressiva PF**: Cálculos de INSS e IRRF para Pró-labore e CLT.
 - **Encargos Sociais**: INSS Patronal (20%), RAT (2%) e Terceiros (5,8%) para empresas de Lucro Presumido/Real.
 
+## Cálculos
+
+### Anexo III (recomendado)
+
+Aplicável quando o pró-labore representa **≥ 28% do faturamento**.
+
+| Item       | Cálculo                                    |
+| ---------- | ------------------------------------------ |
+| DAS        | 6% sobre o faturamento                     |
+| Pró-labore | 28% do faturamento                         |
+| INSS       | 11% sobre o pró-labore                     |
+| IRRF       | Tabela progressiva 2026 sobre o pró-labore |
+
+### Anexo V (evitar)
+
+Aplicável quando o pró-labore representa **< 28% do faturamento**.
+
+| Item       | Cálculo                                    |
+| ---------- | ------------------------------------------ |
+| DAS        | 15,5% sobre o faturamento                  |
+| Pró-labore | ~5% do faturamento                         |
+| INSS       | 11% sobre o pró-labore                     |
+| IRRF       | Tabela progressiva 2026 sobre o pró-labore |
+
+### IRRF 2026
+
+Tabela vigente desde maio/2025 conforme MP 1.294/2025 e Reforma da Renda (Lei 15.270/2025):
+
+| Base de cálculo           | Alíquota | Dedução   |
+| ------------------------- | -------- | --------- |
+| Até R$ 2.428,80           | —        | Isento    |
+| R$ 2.428,81 a R$ 2.826,65 | 7,5%     | R$ 182,16 |
+| R$ 2.826,66 a R$ 3.751,05 | 15%      | R$ 394,16 |
+| R$ 3.751,06 a R$ 4.664,68 | 22,5%    | R$ 675,49 |
+| Acima de R$ 4.664,68      | 27,5%    | R$ 908,73 |
+
+Redutor adicional (Lei 15.270/2025):
+
+- Renda ≤ R$ 5.000 → isenção total
+- R$ 5.000,01 a R$ 7.350 → redutor = `978,62 - (0,133145 × renda)`
+- Acima de R$ 7.350 → sem redutor
+
+---
+
+## Aviso
+
+> Os valores são estimativas para fins de simulação. Consulte um contador para decisões financeiras.
+> Fontes: Receita Federal · [gov.br/receitafederal/tabelas/2026](https://www.gov.br/receitafederal)
+
 ---
 
 _Desenvolvido para ajudar desenvolvedores a tomarem decisões financeiras mais inteligentes._
-
