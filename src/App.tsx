@@ -149,7 +149,7 @@ function App() {
                       </div>
                       <Slider
                         value={[fat]}
-                        max={30000}
+                        max={15000}
                         step={500}
                         onValueChange={(val) =>
                           setFaturamentoStr(val[0].toString())
