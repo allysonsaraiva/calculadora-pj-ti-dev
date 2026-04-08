@@ -33,7 +33,7 @@ function App() {
   const [brutoCLTStr, setBrutoCLTStr] = useState<string>('5000');
   const [vrStr, setVrStr] = useState<string>('0');
   const [saudeStr, setSaudeStr] = useState<string>('0');
-  const [outrosDescontosStr, setOutrosDescontosStr] = useState<string>('26.60');
+  const [outrosDescontosStr, setOutrosDescontosStr] = useState<string>('0');
 
   // Overrides manuais para bater com holerite
   const [inssCLTOverride, setInssCLTOverride] = useState<string>('');
