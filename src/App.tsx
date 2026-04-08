@@ -43,7 +43,7 @@ function App() {
   const [propostaPJStr, setPropostaPJStr] = useState<string>('');
 
   const fat = parseInt(faturamentoStr) || 0;
-  const contador = parseFloat(contadorStr) || 150;
+  const contador = parseFloat(contadorStr) || 0;
 
   const brutoCLT = parseFloat(brutoCLTStr) || 0;
   const vr = parseFloat(vrStr) || 0;
@@ -552,6 +552,23 @@ function App() {
 
                     <div className="space-y-3">
                       <Label className="text-zinc-300 font-semibold">
+                        Custo do Contador (Serviço Mensal)
+                      </Label>
+                      <div className="relative">
+                        <span className="absolute left-3 top-2.5 text-zinc-500 text-sm">
+                          R$
+                        </span>
+                        <Input
+                          type="number"
+                          value={contadorStr}
+                          onChange={(e) => setContadorStr(e.target.value)}
+                          className="pl-9 bg-zinc-900/50 border-zinc-800 focus-visible:ring-purple-500 text-zinc-200"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-zinc-300 font-semibold">
                         Proposta PJ Recebida
                       </Label>
                       <div className="relative">
@@ -672,12 +689,14 @@ function App() {
                             -{fmt(Math.round(resPJProposta.total))}
                           </span>
                         </div>
-                        <div className="flex justify-between text-zinc-400">
-                          <span>Contador</span>
-                          <span className="text-red-400">
-                            -{fmt(Math.round(contador))}
-                          </span>
-                        </div>
+                        {contador > 0 && (
+                          <div className="flex justify-between text-zinc-400">
+                            <span>Contador</span>
+                            <span className="text-red-400">
+                              -{fmt(Math.round(contador))}
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <Separator className="bg-purple-500/10" />
                       <div className="flex justify-between font-bold text-zinc-100 pt-2">
