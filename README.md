@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🚀 Calculadora PJ & Simulador de Pejotização (2026)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um simulador avançado para profissionais de TI, focado em fornecer precisão tributária e embasamento estratégico para negociações de contratos PJ (Pejotização).
 
-Currently, two official plugins are available:
+## 🌟 Principais Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este simulador foi projetado para oferecer uma visão fiel da realidade financeira do profissional e da empresa contratante, permitindo uma análise comparativa profunda entre os modelos CLT e PJ.
 
-## React Compiler
+### 1. 📊 Comparativo Realista (CLT vs. PJ)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Replicação exata de Holerite**: Suporte para overrides manuais de INSS e IRRF, permitindo bater os cálculos com o seu contracheque real.
+- **Detalhamento de Benefícios**: Inclusão de VR/VA, Plano de Saúde e outros descontos personalizados.
+- **Provisões CLT**: Cálculo automático de 13º, Férias + 1/3 e FGTS (8%) projetados mensalmente para comparação justa.
 
-## Expanding the ESLint configuration
+### 2. 🏢 Análise de Custo Patronal
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Custo Total da Empresa**: Descubra o desembolso total do empregador (Bruto + Encargos + Provisões), permitindo identificar o seu "teto" de faturamento PJ.
+- **Alvo de Negociação Win-Win**: Sugestão de faturamento ideal que equilibra o ganho para o profissional e a economia para a empresa.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 3. ⚖️ Inteligência Tributária (Simples Nacional)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Otimização via Fator R**: Cálculo automático entre Anexo III (6%) e Anexo V (15,5%) baseado no faturamento e pró-labore.
+- **Custo Operacional Flexível**: Configure custos contábeis de forma opcional para uma simulação personalizada.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- **Framework**: [React 18](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Animações**: Framer Motion
+- **Icons**: Lucide React
+
+## 🚀 Como Executar
+
+1. Instale as dependências:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Inicie o servidor de desenvolvimento:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## 📈 Lógica de Cálculo
+
+As fórmulas estão centralizadas em `src/lib/calc.ts` e seguem as normas tributárias brasileiras vigentes em 2026:
+
+- **Anexo III/V**: Alíquotas progressivas e regras do Simples Nacional.
+- **Tabela Progressiva PF**: Cálculos de INSS e IRRF para Pró-labore e CLT.
+- **Encargos Sociais**: INSS Patronal (20%), RAT (2%) e Terceiros (5,8%) para empresas de Lucro Presumido/Real.
+
+---
+
+_Desenvolvido para ajudar desenvolvedores a tomarem decisões financeiras mais inteligentes._
+

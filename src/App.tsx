@@ -104,7 +104,7 @@ function App() {
           </h1>
           <p className="text-zinc-400 max-w-xl mx-auto">
             Decubra a melhor estratégia tributária e compare a viabilidade da
-            pjotização frente ao modelo CLT.
+            pejotização frente ao modelo CLT.
           </p>
         </header>
 
